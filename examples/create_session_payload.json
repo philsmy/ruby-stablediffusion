@@ -1,0 +1,145 @@
+{
+  "id": "text_to_image_graph",
+  "nodes": {
+    "positive_conditioning": {
+      "type": "compel",
+      "id": "positive_conditioning",
+      "prompt": "A powerful mysterious African sorceress, NSFW, topless with very dark skin, blue eyes, casting lightning magic, detailed clothing, hyperrealistic, fantasy, Surrealist, by Stanley Artgerm Lau and Alphonse Mucha,  artstation, highly detailed, sharp focus, sci-fi, stunningly beautiful, dystopian, teal and orange, cinematic lighting, very bright",
+      "is_intermediate": true
+    },
+    "negative_conditioning": {
+      "type": "compel",
+      "id": "negative_conditioning",
+      "prompt": "No shiny skin, ugly, tiling, poorly drawn hands, poorly drawn feet, poorly drawn face, out of frame, extra limbs, disfigured, deformed, body out of frame, bad anatomy, watermark, signature, cut off, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face, blurry, draft, grainy",
+      "is_intermediate": true
+    },
+    "noise": {
+      "type": "noise",
+      "id": "noise",
+      "width": 512,
+      "height": 768,
+      "use_cpu": true,
+      "is_intermediate": true
+    },
+    "text_to_latents": {
+      "type": "t2l",
+      "id": "text_to_latents",
+      "is_intermediate": true,
+      "cfg_scale": 7.5,
+      "scheduler": "euler_a",
+      "steps": 50
+    },
+    "main_model_loader": {
+      "type": "main_model_loader",
+      "id": "main_model_loader",
+      "is_intermediate": true,
+      "model": {
+        "model_name": "icbinpICantBelieveIts_seco",
+        "base_model": "sd-1",
+        "model_type": "main"
+      }
+    },
+    "clip_skip": {
+      "type": "clip_skip",
+      "id": "clip_skip",
+      "skipped_layers": 0,
+      "is_intermediate": true
+    },
+    "latents_to_image": {
+      "type": "l2i",
+      "id": "latents_to_image",
+      "fp32": true
+    },
+    "metadata_accumulator": {
+      "id": "metadata_accumulator",
+      "type": "metadata_accumulator",
+      "generation_mode": "txt2img",
+      "cfg_scale": 7.5,
+      "height": 768,
+      "width": 512,
+      "positive_prompt": "A powerful mysterious African sorceress, NSFW, topless with very dark skin, blue eyes, casting lightning magic, detailed clothing, hyperrealistic, fantasy, Surrealist, by Stanley Artgerm Lau and Alphonse Mucha,  artstation, highly detailed, sharp focus, sci-fi, stunningly beautiful, dystopian, teal and orange, cinematic lighting, very bright",
+      "negative_prompt": "No shiny skin, ugly, tiling, poorly drawn hands, poorly drawn feet, poorly drawn face, out of frame, extra limbs, disfigured, deformed, body out of frame, bad anatomy, watermark, signature, cut off, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face, blurry, draft, grainy",
+      "model": {
+        "model_name": "icbinpICantBelieveIts_seco",
+        "base_model": "sd-1",
+        "model_type": "main"
+      },
+      "seed": 0,
+      "steps": 50,
+      "rand_device": "cpu",
+      "scheduler": "euler_a",
+      "controlnets": [],
+      "loras": [],
+      "clip_skip": 0
+    },
+    "iterate": { "id": "iterate", "type": "iterate", "is_intermediate": true },
+    "range_of_size": {
+      "id": "range_of_size",
+      "type": "range_of_size",
+      "is_intermediate": true,
+      "size": 1,
+      "step": 1,
+      "start": 3688495139
+    }
+  },
+  "edges": [
+    {
+      "source": { "node_id": "main_model_loader", "field": "clip" },
+      "destination": { "node_id": "clip_skip", "field": "clip" }
+    },
+    {
+      "source": { "node_id": "main_model_loader", "field": "unet" },
+      "destination": { "node_id": "text_to_latents", "field": "unet" }
+    },
+    {
+      "source": { "node_id": "clip_skip", "field": "clip" },
+      "destination": { "node_id": "positive_conditioning", "field": "clip" }
+    },
+    {
+      "source": { "node_id": "clip_skip", "field": "clip" },
+      "destination": { "node_id": "negative_conditioning", "field": "clip" }
+    },
+    {
+      "source": { "node_id": "positive_conditioning", "field": "conditioning" },
+      "destination": {
+        "node_id": "text_to_latents",
+        "field": "positive_conditioning"
+      }
+    },
+    {
+      "source": { "node_id": "negative_conditioning", "field": "conditioning" },
+      "destination": {
+        "node_id": "text_to_latents",
+        "field": "negative_conditioning"
+      }
+    },
+    {
+      "source": { "node_id": "text_to_latents", "field": "latents" },
+      "destination": { "node_id": "latents_to_image", "field": "latents" }
+    },
+    {
+      "source": { "node_id": "noise", "field": "noise" },
+      "destination": { "node_id": "text_to_latents", "field": "noise" }
+    },
+    {
+      "source": { "node_id": "metadata_accumulator", "field": "metadata" },
+      "destination": { "node_id": "latents_to_image", "field": "metadata" }
+    },
+    {
+      "source": { "node_id": "main_model_loader", "field": "vae" },
+      "destination": { "node_id": "latents_to_image", "field": "vae" }
+    },
+    {
+      "source": { "node_id": "range_of_size", "field": "collection" },
+      "destination": { "node_id": "iterate", "field": "collection" }
+    },
+    {
+      "source": { "node_id": "iterate", "field": "item" },
+      "destination": { "node_id": "noise", "field": "seed" }
+    },
+    {
+      "source": { "node_id": "iterate", "field": "item" },
+      "destination": { "node_id": "metadata_accumulator", "field": "seed" }
+    }
+  ]
+}

@@ -1,0 +1,717 @@
+{
+  "id": "3f94e512-dd46-41c3-854a-a06f5492d1a7",
+  "graph": {
+    "id": "text_to_image_graph",
+    "nodes": {
+      "positive_conditioning": {
+        "id": "positive_conditioning",
+        "is_intermediate": true,
+        "type": "compel",
+        "prompt": "nipple clamps, photo of a woman named+++((Chihiro)), best quality, (8k, RAW photo, best quality, masterpiece:1. 2), (realistic, photo-realistic:1. 4), ultra-detailed, Japanese, NSFW, tanned skin, 12 years old, very small breasts, hard nipples, naked, nude, nudity, topless, sex, no clothes, sexy look, large dark wavy hair blowing in the wind, very intricate, very detailed,(POST PROCESSING:1.3),(SHARP FOCUS:1.3),8K, (highly detailed body, highly detailed face, highly detailed eye,best quality:1.2), ",
+        "clip": null
+      },
+      "negative_conditioning": {
+        "id": "negative_conditioning",
+        "is_intermediate": true,
+        "type": "compel",
+        "prompt": "paintings,sketches, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale)), skin spots, acnes, skin blemishes, bad anatomy,(long hair:1.4),DeepNegative,(fat:1.2),facing away, looking away,tilted head, {Multiple people}, lowres,bad anatomy,bad hands, text, error, missing fingers,extra digit, fewer digits, cropped, worstquality, low quality, normal quality,jpegartifacts,signature, watermark, username,blurry,bad feet,cropped,poorly drawn hands,poorly drawn face,mutation,deformed,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,extra fingers,fewer digits,extra limbs,extra arms,extra legs,malformed limbs,fused fingers,too many fingers,long neck,cross-eyed,mutated hands,polar lowres,bad body,bad proportions,gross proportions,text,error,missing fingers,missing arms,missing legs,extra digit, extra arms, extra leg, extra foot,",
+        "clip": null
+      },
+      "noise": {
+        "id": "noise",
+        "is_intermediate": true,
+        "type": "noise",
+        "seed": 2285184633,
+        "width": 512,
+        "height": 768,
+        "use_cpu": true
+      },
+      "text_to_latents": {
+        "id": "text_to_latents",
+        "is_intermediate": true,
+        "type": "t2l",
+        "positive_conditioning": null,
+        "negative_conditioning": null,
+        "noise": null,
+        "steps": 10,
+        "cfg_scale": 7.5,
+        "scheduler": "euler_a",
+        "unet": null,
+        "control": null
+      },
+      "main_model_loader": {
+        "id": "main_model_loader",
+        "is_intermediate": true,
+        "type": "main_model_loader",
+        "model": {
+          "model_name": "absolutereality_v181",
+          "base_model": "sd-1",
+          "model_type": "main"
+        }
+      },
+      "clip_skip": {
+        "id": "clip_skip",
+        "is_intermediate": true,
+        "type": "clip_skip",
+        "clip": null,
+        "skipped_layers": 0
+      },
+      "latents_to_image": {
+        "id": "latents_to_image",
+        "is_intermediate": false,
+        "type": "l2i",
+        "latents": null,
+        "vae": null,
+        "tiled": false,
+        "fp32": true,
+        "metadata": null
+      },
+      "metadata_accumulator": {
+        "id": "metadata_accumulator",
+        "is_intermediate": false,
+        "type": "metadata_accumulator",
+        "generation_mode": "txt2img",
+        "positive_prompt": "nipple clamps, photo of a woman named+++((Chihiro)), best quality, (8k, RAW photo, best quality, masterpiece:1. 2), (realistic, photo-realistic:1. 4), ultra-detailed, Japanese, NSFW, tanned skin, 12 years old, very small breasts, hard nipples, naked, nude, nudity, topless, sex, no clothes, sexy look, large dark wavy hair blowing in the wind, very intricate, very detailed,(POST PROCESSING:1.3),(SHARP FOCUS:1.3),8K, (highly detailed body, highly detailed face, highly detailed eye,best quality:1.2), ",
+        "negative_prompt": "paintings,sketches, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale)), skin spots, acnes, skin blemishes, bad anatomy,(long hair:1.4),DeepNegative,(fat:1.2),facing away, looking away,tilted head, {Multiple people}, lowres,bad anatomy,bad hands, text, error, missing fingers,extra digit, fewer digits, cropped, worstquality, low quality, normal quality,jpegartifacts,signature, watermark, username,blurry,bad feet,cropped,poorly drawn hands,poorly drawn face,mutation,deformed,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,extra fingers,fewer digits,extra limbs,extra arms,extra legs,malformed limbs,fused fingers,too many fingers,long neck,cross-eyed,mutated hands,polar lowres,bad body,bad proportions,gross proportions,text,error,missing fingers,missing arms,missing legs,extra digit, extra arms, extra leg, extra foot,",
+        "width": 512,
+        "height": 768,
+        "seed": 0,
+        "rand_device": "cpu",
+        "cfg_scale": 7.5,
+        "steps": 10,
+        "scheduler": "euler_a",
+        "clip_skip": 0,
+        "model": {
+          "model_name": "absolutereality_v181",
+          "base_model": "sd-1",
+          "model_type": "main"
+        },
+        "controlnets": [],
+        "loras": [],
+        "strength": null,
+        "init_image": null,
+        "vae": null,
+        "positive_style_prompt": null,
+        "negative_style_prompt": null,
+        "refiner_model": null,
+        "refiner_cfg_scale": null,
+        "refiner_steps": null,
+        "refiner_scheduler": null,
+        "refiner_aesthetic_store": null,
+        "refiner_start": null
+      },
+      "iterate": {
+        "id": "iterate",
+        "is_intermediate": true,
+        "type": "iterate",
+        "collection": [],
+        "index": 0
+      },
+      "range_of_size": {
+        "id": "range_of_size",
+        "is_intermediate": true,
+        "type": "range_of_size",
+        "start": 2128443623,
+        "size": 1,
+        "step": 1
+      }
+    },
+    "edges": [
+      {
+        "source": { "node_id": "main_model_loader", "field": "clip" },
+        "destination": { "node_id": "clip_skip", "field": "clip" }
+      },
+      {
+        "source": { "node_id": "main_model_loader", "field": "unet" },
+        "destination": { "node_id": "text_to_latents", "field": "unet" }
+      },
+      {
+        "source": { "node_id": "clip_skip", "field": "clip" },
+        "destination": { "node_id": "positive_conditioning", "field": "clip" }
+      },
+      {
+        "source": { "node_id": "clip_skip", "field": "clip" },
+        "destination": { "node_id": "negative_conditioning", "field": "clip" }
+      },
+      {
+        "source": {
+          "node_id": "positive_conditioning",
+          "field": "conditioning"
+        },
+        "destination": {
+          "node_id": "text_to_latents",
+          "field": "positive_conditioning"
+        }
+      },
+      {
+        "source": {
+          "node_id": "negative_conditioning",
+          "field": "conditioning"
+        },
+        "destination": {
+          "node_id": "text_to_latents",
+          "field": "negative_conditioning"
+        }
+      },
+      {
+        "source": { "node_id": "text_to_latents", "field": "latents" },
+        "destination": { "node_id": "latents_to_image", "field": "latents" }
+      },
+      {
+        "source": { "node_id": "noise", "field": "noise" },
+        "destination": { "node_id": "text_to_latents", "field": "noise" }
+      },
+      {
+        "source": { "node_id": "metadata_accumulator", "field": "metadata" },
+        "destination": { "node_id": "latents_to_image", "field": "metadata" }
+      },
+      {
+        "source": { "node_id": "main_model_loader", "field": "vae" },
+        "destination": { "node_id": "latents_to_image", "field": "vae" }
+      },
+      {
+        "source": { "node_id": "range_of_size", "field": "collection" },
+        "destination": { "node_id": "iterate", "field": "collection" }
+      },
+      {
+        "source": { "node_id": "iterate", "field": "item" },
+        "destination": { "node_id": "noise", "field": "seed" }
+      },
+      {
+        "source": { "node_id": "iterate", "field": "item" },
+        "destination": { "node_id": "metadata_accumulator", "field": "seed" }
+      }
+    ]
+  },
+  "execution_graph": {
+    "id": "1decaa8a-b4f9-4997-82d3-4a7d1bdf88a5",
+    "nodes": {
+      "27531883-993f-445a-a8e5-b74a9ed1aef9": {
+        "id": "27531883-993f-445a-a8e5-b74a9ed1aef9",
+        "is_intermediate": true,
+        "type": "main_model_loader",
+        "model": {
+          "model_name": "absolutereality_v181",
+          "base_model": "sd-1",
+          "model_type": "main"
+        }
+      },
+      "6d82cf50-4a82-4585-98f8-613cfa292abf": {
+        "id": "6d82cf50-4a82-4585-98f8-613cfa292abf",
+        "is_intermediate": true,
+        "type": "range_of_size",
+        "start": 2128443623,
+        "size": 1,
+        "step": 1
+      },
+      "3914bddd-5ac5-4d05-884c-a114f00cc551": {
+        "id": "3914bddd-5ac5-4d05-884c-a114f00cc551",
+        "is_intermediate": true,
+        "type": "clip_skip",
+        "clip": {
+          "tokenizer": {
+            "model_name": "absolutereality_v181",
+            "base_model": "sd-1",
+            "model_type": "main",
+            "submodel": "tokenizer"
+          },
+          "text_encoder": {
+            "model_name": "absolutereality_v181",
+            "base_model": "sd-1",
+            "model_type": "main",
+            "submodel": "text_encoder"
+          },
+          "skipped_layers": 0,
+          "loras": []
+        },
+        "skipped_layers": 0
+      },
+      "776ebd72-6619-46b2-8448-ce78f410ba49": {
+        "id": "776ebd72-6619-46b2-8448-ce78f410ba49",
+        "is_intermediate": true,
+        "type": "compel",
+        "prompt": "nipple clamps, photo of a woman named+++((Chihiro)), best quality, (8k, RAW photo, best quality, masterpiece:1. 2), (realistic, photo-realistic:1. 4), ultra-detailed, Japanese, NSFW, tanned skin, 12 years old, very small breasts, hard nipples, naked, nude, nudity, topless, sex, no clothes, sexy look, large dark wavy hair blowing in the wind, very intricate, very detailed,(POST PROCESSING:1.3),(SHARP FOCUS:1.3),8K, (highly detailed body, highly detailed face, highly detailed eye,best quality:1.2), ",
+        "clip": {
+          "tokenizer": {
+            "model_name": "absolutereality_v181",
+            "base_model": "sd-1",
+            "model_type": "main",
+            "submodel": "tokenizer"
+          },
+          "text_encoder": {
+            "model_name": "absolutereality_v181",
+            "base_model": "sd-1",
+            "model_type": "main",
+            "submodel": "text_encoder"
+          },
+          "skipped_layers": 0,
+          "loras": []
+        }
+      },
+      "daeeba6f-d218-4cd1-bf02-5c15d35d505d": {
+        "id": "daeeba6f-d218-4cd1-bf02-5c15d35d505d",
+        "is_intermediate": true,
+        "type": "compel",
+        "prompt": "paintings,sketches, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale)), skin spots, acnes, skin blemishes, bad anatomy,(long hair:1.4),DeepNegative,(fat:1.2),facing away, looking away,tilted head, {Multiple people}, lowres,bad anatomy,bad hands, text, error, missing fingers,extra digit, fewer digits, cropped, worstquality, low quality, normal quality,jpegartifacts,signature, watermark, username,blurry,bad feet,cropped,poorly drawn hands,poorly drawn face,mutation,deformed,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,extra fingers,fewer digits,extra limbs,extra arms,extra legs,malformed limbs,fused fingers,too many fingers,long neck,cross-eyed,mutated hands,polar lowres,bad body,bad proportions,gross proportions,text,error,missing fingers,missing arms,missing legs,extra digit, extra arms, extra leg, extra foot,",
+        "clip": {
+          "tokenizer": {
+            "model_name": "absolutereality_v181",
+            "base_model": "sd-1",
+            "model_type": "main",
+            "submodel": "tokenizer"
+          },
+          "text_encoder": {
+            "model_name": "absolutereality_v181",
+            "base_model": "sd-1",
+            "model_type": "main",
+            "submodel": "text_encoder"
+          },
+          "skipped_layers": 0,
+          "loras": []
+        }
+      },
+      "dfcde8f5-1d16-4e22-904f-43873287812a": {
+        "id": "dfcde8f5-1d16-4e22-904f-43873287812a",
+        "is_intermediate": true,
+        "type": "iterate",
+        "collection": [2128443623],
+        "index": 0
+      },
+      "3c7da62a-e1df-4a6c-8371-8cbf8a745fe7": {
+        "id": "3c7da62a-e1df-4a6c-8371-8cbf8a745fe7",
+        "is_intermediate": true,
+        "type": "noise",
+        "seed": 2128443623,
+        "width": 512,
+        "height": 768,
+        "use_cpu": true
+      },
+      "f72727fc-f545-482e-820b-adf2101f14d0": {
+        "id": "f72727fc-f545-482e-820b-adf2101f14d0",
+        "is_intermediate": false,
+        "type": "metadata_accumulator",
+        "generation_mode": "txt2img",
+        "positive_prompt": "nipple clamps, photo of a woman named+++((Chihiro)), best quality, (8k, RAW photo, best quality, masterpiece:1. 2), (realistic, photo-realistic:1. 4), ultra-detailed, Japanese, NSFW, tanned skin, 12 years old, very small breasts, hard nipples, naked, nude, nudity, topless, sex, no clothes, sexy look, large dark wavy hair blowing in the wind, very intricate, very detailed,(POST PROCESSING:1.3),(SHARP FOCUS:1.3),8K, (highly detailed body, highly detailed face, highly detailed eye,best quality:1.2), ",
+        "negative_prompt": "paintings,sketches, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale)), skin spots, acnes, skin blemishes, bad anatomy,(long hair:1.4),DeepNegative,(fat:1.2),facing away, looking away,tilted head, {Multiple people}, lowres,bad anatomy,bad hands, text, error, missing fingers,extra digit, fewer digits, cropped, worstquality, low quality, normal quality,jpegartifacts,signature, watermark, username,blurry,bad feet,cropped,poorly drawn hands,poorly drawn face,mutation,deformed,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,extra fingers,fewer digits,extra limbs,extra arms,extra legs,malformed limbs,fused fingers,too many fingers,long neck,cross-eyed,mutated hands,polar lowres,bad body,bad proportions,gross proportions,text,error,missing fingers,missing arms,missing legs,extra digit, extra arms, extra leg, extra foot,",
+        "width": 512,
+        "height": 768,
+        "seed": 2128443623,
+        "rand_device": "cpu",
+        "cfg_scale": 7.5,
+        "steps": 10,
+        "scheduler": "euler_a",
+        "clip_skip": 0,
+        "model": {
+          "model_name": "absolutereality_v181",
+          "base_model": "sd-1",
+          "model_type": "main"
+        },
+        "controlnets": [],
+        "loras": [],
+        "strength": null,
+        "init_image": null,
+        "vae": null,
+        "positive_style_prompt": null,
+        "negative_style_prompt": null,
+        "refiner_model": null,
+        "refiner_cfg_scale": null,
+        "refiner_steps": null,
+        "refiner_scheduler": null,
+        "refiner_aesthetic_store": null,
+        "refiner_start": null
+      },
+      "8d7e7c08-b158-4f7e-8df4-839e3d51a04c": {
+        "id": "8d7e7c08-b158-4f7e-8df4-839e3d51a04c",
+        "is_intermediate": true,
+        "type": "t2l",
+        "positive_conditioning": {
+          "conditioning_name": "3f94e512-dd46-41c3-854a-a06f5492d1a7_776ebd72-6619-46b2-8448-ce78f410ba49_conditioning"
+        },
+        "negative_conditioning": {
+          "conditioning_name": "3f94e512-dd46-41c3-854a-a06f5492d1a7_daeeba6f-d218-4cd1-bf02-5c15d35d505d_conditioning"
+        },
+        "noise": {
+          "latents_name": "3f94e512-dd46-41c3-854a-a06f5492d1a7__3c7da62a-e1df-4a6c-8371-8cbf8a745fe7"
+        },
+        "steps": 10,
+        "cfg_scale": 7.5,
+        "scheduler": "euler_a",
+        "unet": {
+          "unet": {
+            "model_name": "absolutereality_v181",
+            "base_model": "sd-1",
+            "model_type": "main",
+            "submodel": "unet"
+          },
+          "scheduler": {
+            "model_name": "absolutereality_v181",
+            "base_model": "sd-1",
+            "model_type": "main",
+            "submodel": "scheduler"
+          },
+          "loras": []
+        },
+        "control": null
+      },
+      "d8583dc2-8c8c-4a3e-8828-e47ae2b3e221": {
+        "id": "d8583dc2-8c8c-4a3e-8828-e47ae2b3e221",
+        "is_intermediate": false,
+        "type": "l2i",
+        "latents": {
+          "latents_name": "3f94e512-dd46-41c3-854a-a06f5492d1a7__8d7e7c08-b158-4f7e-8df4-839e3d51a04c"
+        },
+        "vae": {
+          "vae": {
+            "model_name": "absolutereality_v181",
+            "base_model": "sd-1",
+            "model_type": "main",
+            "submodel": "vae"
+          }
+        },
+        "tiled": false,
+        "fp32": true,
+        "metadata": {
+          "app_version": "3.0.2",
+          "generation_mode": "txt2img",
+          "positive_prompt": "nipple clamps, photo of a woman named+++((Chihiro)), best quality, (8k, RAW photo, best quality, masterpiece:1. 2), (realistic, photo-realistic:1. 4), ultra-detailed, Japanese, NSFW, tanned skin, 12 years old, very small breasts, hard nipples, naked, nude, nudity, topless, sex, no clothes, sexy look, large dark wavy hair blowing in the wind, very intricate, very detailed,(POST PROCESSING:1.3),(SHARP FOCUS:1.3),8K, (highly detailed body, highly detailed face, highly detailed eye,best quality:1.2), ",
+          "negative_prompt": "paintings,sketches, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale)), skin spots, acnes, skin blemishes, bad anatomy,(long hair:1.4),DeepNegative,(fat:1.2),facing away, looking away,tilted head, {Multiple people}, lowres,bad anatomy,bad hands, text, error, missing fingers,extra digit, fewer digits, cropped, worstquality, low quality, normal quality,jpegartifacts,signature, watermark, username,blurry,bad feet,cropped,poorly drawn hands,poorly drawn face,mutation,deformed,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,extra fingers,fewer digits,extra limbs,extra arms,extra legs,malformed limbs,fused fingers,too many fingers,long neck,cross-eyed,mutated hands,polar lowres,bad body,bad proportions,gross proportions,text,error,missing fingers,missing arms,missing legs,extra digit, extra arms, extra leg, extra foot,",
+          "width": 512,
+          "height": 768,
+          "seed": 2128443623,
+          "rand_device": "cpu",
+          "cfg_scale": 7.5,
+          "steps": 10,
+          "scheduler": "euler_a",
+          "clip_skip": 0,
+          "model": {
+            "model_name": "absolutereality_v181",
+            "base_model": "sd-1",
+            "model_type": "main"
+          },
+          "controlnets": [],
+          "loras": []
+        }
+      }
+    },
+    "edges": [
+      {
+        "source": {
+          "node_id": "27531883-993f-445a-a8e5-b74a9ed1aef9",
+          "field": "clip"
+        },
+        "destination": {
+          "node_id": "3914bddd-5ac5-4d05-884c-a114f00cc551",
+          "field": "clip"
+        }
+      },
+      {
+        "source": {
+          "node_id": "3914bddd-5ac5-4d05-884c-a114f00cc551",
+          "field": "clip"
+        },
+        "destination": {
+          "node_id": "776ebd72-6619-46b2-8448-ce78f410ba49",
+          "field": "clip"
+        }
+      },
+      {
+        "source": {
+          "node_id": "3914bddd-5ac5-4d05-884c-a114f00cc551",
+          "field": "clip"
+        },
+        "destination": {
+          "node_id": "daeeba6f-d218-4cd1-bf02-5c15d35d505d",
+          "field": "clip"
+        }
+      },
+      {
+        "source": {
+          "node_id": "6d82cf50-4a82-4585-98f8-613cfa292abf",
+          "field": "collection"
+        },
+        "destination": {
+          "node_id": "dfcde8f5-1d16-4e22-904f-43873287812a",
+          "field": "collection"
+        }
+      },
+      {
+        "source": {
+          "node_id": "dfcde8f5-1d16-4e22-904f-43873287812a",
+          "field": "item"
+        },
+        "destination": {
+          "node_id": "3c7da62a-e1df-4a6c-8371-8cbf8a745fe7",
+          "field": "seed"
+        }
+      },
+      {
+        "source": {
+          "node_id": "dfcde8f5-1d16-4e22-904f-43873287812a",
+          "field": "item"
+        },
+        "destination": {
+          "node_id": "f72727fc-f545-482e-820b-adf2101f14d0",
+          "field": "seed"
+        }
+      },
+      {
+        "source": {
+          "node_id": "27531883-993f-445a-a8e5-b74a9ed1aef9",
+          "field": "unet"
+        },
+        "destination": {
+          "node_id": "8d7e7c08-b158-4f7e-8df4-839e3d51a04c",
+          "field": "unet"
+        }
+      },
+      {
+        "source": {
+          "node_id": "776ebd72-6619-46b2-8448-ce78f410ba49",
+          "field": "conditioning"
+        },
+        "destination": {
+          "node_id": "8d7e7c08-b158-4f7e-8df4-839e3d51a04c",
+          "field": "positive_conditioning"
+        }
+      },
+      {
+        "source": {
+          "node_id": "daeeba6f-d218-4cd1-bf02-5c15d35d505d",
+          "field": "conditioning"
+        },
+        "destination": {
+          "node_id": "8d7e7c08-b158-4f7e-8df4-839e3d51a04c",
+          "field": "negative_conditioning"
+        }
+      },
+      {
+        "source": {
+          "node_id": "3c7da62a-e1df-4a6c-8371-8cbf8a745fe7",
+          "field": "noise"
+        },
+        "destination": {
+          "node_id": "8d7e7c08-b158-4f7e-8df4-839e3d51a04c",
+          "field": "noise"
+        }
+      },
+      {
+        "source": {
+          "node_id": "8d7e7c08-b158-4f7e-8df4-839e3d51a04c",
+          "field": "latents"
+        },
+        "destination": {
+          "node_id": "d8583dc2-8c8c-4a3e-8828-e47ae2b3e221",
+          "field": "latents"
+        }
+      },
+      {
+        "source": {
+          "node_id": "f72727fc-f545-482e-820b-adf2101f14d0",
+          "field": "metadata"
+        },
+        "destination": {
+          "node_id": "d8583dc2-8c8c-4a3e-8828-e47ae2b3e221",
+          "field": "metadata"
+        }
+      },
+      {
+        "source": {
+          "node_id": "27531883-993f-445a-a8e5-b74a9ed1aef9",
+          "field": "vae"
+        },
+        "destination": {
+          "node_id": "d8583dc2-8c8c-4a3e-8828-e47ae2b3e221",
+          "field": "vae"
+        }
+      }
+    ]
+  },
+  "executed": [
+    "negative_conditioning",
+    "6d82cf50-4a82-4585-98f8-613cfa292abf",
+    "latents_to_image",
+    "27531883-993f-445a-a8e5-b74a9ed1aef9",
+    "positive_conditioning",
+    "d8583dc2-8c8c-4a3e-8828-e47ae2b3e221",
+    "main_model_loader",
+    "f72727fc-f545-482e-820b-adf2101f14d0",
+    "daeeba6f-d218-4cd1-bf02-5c15d35d505d",
+    "iterate",
+    "776ebd72-6619-46b2-8448-ce78f410ba49",
+    "metadata_accumulator",
+    "text_to_latents",
+    "3c7da62a-e1df-4a6c-8371-8cbf8a745fe7",
+    "3914bddd-5ac5-4d05-884c-a114f00cc551",
+    "8d7e7c08-b158-4f7e-8df4-839e3d51a04c",
+    "noise",
+    "dfcde8f5-1d16-4e22-904f-43873287812a",
+    "clip_skip",
+    "range_of_size"
+  ],
+  "executed_history": [
+    "main_model_loader",
+    "clip_skip",
+    "positive_conditioning",
+    "negative_conditioning",
+    "range_of_size",
+    "iterate",
+    "noise",
+    "text_to_latents",
+    "metadata_accumulator",
+    "latents_to_image"
+  ],
+  "results": {
+    "27531883-993f-445a-a8e5-b74a9ed1aef9": {
+      "type": "model_loader_output",
+      "unet": {
+        "unet": {
+          "model_name": "absolutereality_v181",
+          "base_model": "sd-1",
+          "model_type": "main",
+          "submodel": "unet"
+        },
+        "scheduler": {
+          "model_name": "absolutereality_v181",
+          "base_model": "sd-1",
+          "model_type": "main",
+          "submodel": "scheduler"
+        },
+        "loras": []
+      },
+      "clip": {
+        "tokenizer": {
+          "model_name": "absolutereality_v181",
+          "base_model": "sd-1",
+          "model_type": "main",
+          "submodel": "tokenizer"
+        },
+        "text_encoder": {
+          "model_name": "absolutereality_v181",
+          "base_model": "sd-1",
+          "model_type": "main",
+          "submodel": "text_encoder"
+        },
+        "skipped_layers": 0,
+        "loras": []
+      },
+      "vae": {
+        "vae": {
+          "model_name": "absolutereality_v181",
+          "base_model": "sd-1",
+          "model_type": "main",
+          "submodel": "vae"
+        }
+      }
+    },
+    "3914bddd-5ac5-4d05-884c-a114f00cc551": {
+      "type": "clip_skip_output",
+      "clip": {
+        "tokenizer": {
+          "model_name": "absolutereality_v181",
+          "base_model": "sd-1",
+          "model_type": "main",
+          "submodel": "tokenizer"
+        },
+        "text_encoder": {
+          "model_name": "absolutereality_v181",
+          "base_model": "sd-1",
+          "model_type": "main",
+          "submodel": "text_encoder"
+        },
+        "skipped_layers": 0,
+        "loras": []
+      }
+    },
+    "776ebd72-6619-46b2-8448-ce78f410ba49": {
+      "type": "compel_output",
+      "conditioning": {
+        "conditioning_name": "3f94e512-dd46-41c3-854a-a06f5492d1a7_776ebd72-6619-46b2-8448-ce78f410ba49_conditioning"
+      }
+    },
+    "daeeba6f-d218-4cd1-bf02-5c15d35d505d": {
+      "type": "compel_output",
+      "conditioning": {
+        "conditioning_name": "3f94e512-dd46-41c3-854a-a06f5492d1a7_daeeba6f-d218-4cd1-bf02-5c15d35d505d_conditioning"
+      }
+    },
+    "6d82cf50-4a82-4585-98f8-613cfa292abf": {
+      "type": "int_collection",
+      "collection": [2128443623]
+    },
+    "dfcde8f5-1d16-4e22-904f-43873287812a": {
+      "type": "iterate_output",
+      "item": 2128443623
+    },
+    "3c7da62a-e1df-4a6c-8371-8cbf8a745fe7": {
+      "type": "noise_output",
+      "noise": {
+        "latents_name": "3f94e512-dd46-41c3-854a-a06f5492d1a7__3c7da62a-e1df-4a6c-8371-8cbf8a745fe7"
+      },
+      "width": 512,
+      "height": 768
+    },
+    "8d7e7c08-b158-4f7e-8df4-839e3d51a04c": {
+      "type": "latents_output",
+      "latents": {
+        "latents_name": "3f94e512-dd46-41c3-854a-a06f5492d1a7__8d7e7c08-b158-4f7e-8df4-839e3d51a04c"
+      },
+      "width": 512,
+      "height": 768
+    },
+    "f72727fc-f545-482e-820b-adf2101f14d0": {
+      "type": "metadata_accumulator_output",
+      "metadata": {
+        "app_version": "3.0.2",
+        "generation_mode": "txt2img",
+        "positive_prompt": "nipple clamps, photo of a woman named+++((Chihiro)), best quality, (8k, RAW photo, best quality, masterpiece:1. 2), (realistic, photo-realistic:1. 4), ultra-detailed, Japanese, NSFW, tanned skin, 12 years old, very small breasts, hard nipples, naked, nude, nudity, topless, sex, no clothes, sexy look, large dark wavy hair blowing in the wind, very intricate, very detailed,(POST PROCESSING:1.3),(SHARP FOCUS:1.3),8K, (highly detailed body, highly detailed face, highly detailed eye,best quality:1.2), ",
+        "negative_prompt": "paintings,sketches, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)), ((grayscale)), skin spots, acnes, skin blemishes, bad anatomy,(long hair:1.4),DeepNegative,(fat:1.2),facing away, looking away,tilted head, {Multiple people}, lowres,bad anatomy,bad hands, text, error, missing fingers,extra digit, fewer digits, cropped, worstquality, low quality, normal quality,jpegartifacts,signature, watermark, username,blurry,bad feet,cropped,poorly drawn hands,poorly drawn face,mutation,deformed,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,extra fingers,fewer digits,extra limbs,extra arms,extra legs,malformed limbs,fused fingers,too many fingers,long neck,cross-eyed,mutated hands,polar lowres,bad body,bad proportions,gross proportions,text,error,missing fingers,missing arms,missing legs,extra digit, extra arms, extra leg, extra foot,",
+        "width": 512,
+        "height": 768,
+        "seed": 2128443623,
+        "rand_device": "cpu",
+        "cfg_scale": 7.5,
+        "steps": 10,
+        "scheduler": "euler_a",
+        "clip_skip": 0,
+        "model": {
+          "model_name": "absolutereality_v181",
+          "base_model": "sd-1",
+          "model_type": "main"
+        },
+        "controlnets": [],
+        "loras": []
+      }
+    },
+    "d8583dc2-8c8c-4a3e-8828-e47ae2b3e221": {
+      "type": "image_output",
+      "image": { "image_name": "95270e38-24f2-46a3-832d-73a444a59063.png" },
+      "width": 512,
+      "height": 768
+    }
+  },
+  "errors": {},
+  "prepared_source_mapping": {
+    "27531883-993f-445a-a8e5-b74a9ed1aef9": "main_model_loader",
+    "6d82cf50-4a82-4585-98f8-613cfa292abf": "range_of_size",
+    "3914bddd-5ac5-4d05-884c-a114f00cc551": "clip_skip",
+    "776ebd72-6619-46b2-8448-ce78f410ba49": "positive_conditioning",
+    "daeeba6f-d218-4cd1-bf02-5c15d35d505d": "negative_conditioning",
+    "dfcde8f5-1d16-4e22-904f-43873287812a": "iterate",
+    "3c7da62a-e1df-4a6c-8371-8cbf8a745fe7": "noise",
+    "f72727fc-f545-482e-820b-adf2101f14d0": "metadata_accumulator",
+    "8d7e7c08-b158-4f7e-8df4-839e3d51a04c": "text_to_latents",
+    "d8583dc2-8c8c-4a3e-8828-e47ae2b3e221": "latents_to_image"
+  },
+  "source_prepared_mapping": {
+    "main_model_loader": ["27531883-993f-445a-a8e5-b74a9ed1aef9"],
+    "range_of_size": ["6d82cf50-4a82-4585-98f8-613cfa292abf"],
+    "clip_skip": ["3914bddd-5ac5-4d05-884c-a114f00cc551"],
+    "positive_conditioning": ["776ebd72-6619-46b2-8448-ce78f410ba49"],
+    "negative_conditioning": ["daeeba6f-d218-4cd1-bf02-5c15d35d505d"],
+    "iterate": ["dfcde8f5-1d16-4e22-904f-43873287812a"],
+    "noise": ["3c7da62a-e1df-4a6c-8371-8cbf8a745fe7"],
+    "metadata_accumulator": ["f72727fc-f545-482e-820b-adf2101f14d0"],
+    "text_to_latents": ["8d7e7c08-b158-4f7e-8df4-839e3d51a04c"],
+    "latents_to_image": ["d8583dc2-8c8c-4a3e-8828-e47ae2b3e221"]
+  }
+}
