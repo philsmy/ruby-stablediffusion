@@ -1,4 +1,4 @@
-# Rauto1111AI::TrainResponse
+# RStableDiffusionAI::TrainResponse
 
 ## Properties
 Name | Type | Description | Notes

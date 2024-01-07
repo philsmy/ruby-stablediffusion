@@ -11,14 +11,14 @@ Swagger Codegen version: 3.0.46
 
 require 'spec_helper'
 
-describe Rauto1111AI::Configuration do
-  let(:config) { Rauto1111AI::Configuration.default }
+describe RStableDiffusionAI::Configuration do
+  let(:config) { RStableDiffusionAI::Configuration.default }
 
   before(:each) do
     # uncomment below to setup host and base_path
     # require 'URI'
     # uri = URI.parse("/")
-    # Rauto1111AI.configure do |c|
+    # RStableDiffusionAI.configure do |c|
     #   c.host = uri.host
     #   c.base_path = uri.path
     # end

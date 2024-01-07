@@ -1,4 +1,4 @@
-# Rauto1111AI::EmbeddingsResponse
+# RStableDiffusionAI::EmbeddingsResponse
 
 ## Properties
 Name | Type | Description | Notes

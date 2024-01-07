@@ -1,4 +1,4 @@
-# Rauto1111AI::SamplerItem
+# RStableDiffusionAI::SamplerItem
 
 ## Properties
 Name | Type | Description | Notes

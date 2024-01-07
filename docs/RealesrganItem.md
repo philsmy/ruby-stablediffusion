@@ -1,4 +1,4 @@
-# Rauto1111AI::RealesrganItem
+# RStableDiffusionAI::RealesrganItem
 
 ## Properties
 Name | Type | Description | Notes

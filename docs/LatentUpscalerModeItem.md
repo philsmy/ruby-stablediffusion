@@ -1,4 +1,4 @@
-# Rauto1111AI::LatentUpscalerModeItem
+# RStableDiffusionAI::LatentUpscalerModeItem
 
 ## Properties
 Name | Type | Description | Notes

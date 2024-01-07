@@ -1,4 +1,4 @@
-# Rauto1111AI::EmbeddingItem
+# RStableDiffusionAI::EmbeddingItem
 
 ## Properties
 Name | Type | Description | Notes

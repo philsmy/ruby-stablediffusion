@@ -1,4 +1,4 @@
-# Rauto1111AI::PromptStyleItem
+# RStableDiffusionAI::PromptStyleItem
 
 ## Properties
 Name | Type | Description | Notes

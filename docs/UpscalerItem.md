@@ -1,4 +1,4 @@
-# Rauto1111AI::UpscalerItem
+# RStableDiffusionAI::UpscalerItem
 
 ## Properties
 Name | Type | Description | Notes

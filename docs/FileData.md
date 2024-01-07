@@ -1,4 +1,4 @@
-# Rauto1111AI::FileData
+# RStableDiffusionAI::FileData
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Rauto1111AI::QuicksettingsHint
+# RStableDiffusionAI::QuicksettingsHint
 
 ## Properties
 Name | Type | Description | Notes

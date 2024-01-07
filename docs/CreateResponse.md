@@ -1,4 +1,4 @@
-# Rauto1111AI::CreateResponse
+# RStableDiffusionAI::CreateResponse
 
 ## Properties
 Name | Type | Description | Notes

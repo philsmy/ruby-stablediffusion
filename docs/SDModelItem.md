@@ -1,4 +1,4 @@
-# Rauto1111AI::SDModelItem
+# RStableDiffusionAI::SDModelItem
 
 ## Properties
 Name | Type | Description | Notes

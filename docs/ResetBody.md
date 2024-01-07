@@ -1,4 +1,4 @@
-# Rauto1111AI::ResetBody
+# RStableDiffusionAI::ResetBody
 
 ## Properties
 Name | Type | Description | Notes

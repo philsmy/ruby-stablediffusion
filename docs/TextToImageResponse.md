@@ -1,4 +1,4 @@
-# Rauto1111AI::TextToImageResponse
+# RStableDiffusionAI::TextToImageResponse
 
 ## Properties
 Name | Type | Description | Notes

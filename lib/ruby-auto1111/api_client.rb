@@ -16,7 +16,7 @@ require 'tempfile'
 require 'typhoeus'
 require 'uri'
 
-module Rauto1111AI
+module RStableDiffusionAI
   class ApiClient
     # The Configuration object holding settings to be used in the API client.
     attr_accessor :config
@@ -236,7 +236,7 @@ module Rauto1111AI
         end
       else
         # models, e.g. Pet
-        Rauto1111AI.const_get(return_type).build_from_hash(data)
+        RStableDiffusionAI.const_get(return_type).build_from_hash(data)
       end
     end
 

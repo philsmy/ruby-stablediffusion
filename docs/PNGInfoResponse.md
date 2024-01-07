@@ -1,4 +1,4 @@
-# Rauto1111AI::PNGInfoResponse
+# RStableDiffusionAI::PNGInfoResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,9 +1,9 @@
 {
-  "gemName": "ruby-auto1111",
-  "moduleName": "Rauto1111AI",
+  "gemName": "ruby-stablediffusion",
+  "moduleName": "RStableDiffusionAI",
   "gemVersion": "0.1.0",
   "gemAuthor": "Phil Smy",
   "gemAuthorEmail": "",
-  "gemHomepage": "https://github.com/philsmy/ruby-auto1111",
+  "gemHomepage": "https://github.com/philsmy/ruby-stablediffusion",
   "gemLicense": "Apache-2.0"
 }

@@ -1,4 +1,4 @@
-# Rauto1111AI::PreprocessResponse
+# RStableDiffusionAI::PreprocessResponse
 
 ## Properties
 Name | Type | Description | Notes

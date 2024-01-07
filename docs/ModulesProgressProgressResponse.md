@@ -1,4 +1,4 @@
-# Rauto1111AI::ModulesProgressProgressResponse
+# RStableDiffusionAI::ModulesProgressProgressResponse
 
 ## Properties
 Name | Type | Description | Notes

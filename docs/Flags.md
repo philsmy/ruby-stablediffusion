@@ -1,4 +1,4 @@
-# Rauto1111AI::Flags
+# RStableDiffusionAI::Flags
 
 ## Properties
 Name | Type | Description | Notes

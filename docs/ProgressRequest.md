@@ -1,4 +1,4 @@
-# Rauto1111AI::ProgressRequest
+# RStableDiffusionAI::ProgressRequest
 
 ## Properties
 Name | Type | Description | Notes

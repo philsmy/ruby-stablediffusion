@@ -1,4 +1,4 @@
-# Rauto1111AI::ExtrasSingleImageResponse
+# RStableDiffusionAI::ExtrasSingleImageResponse
 
 ## Properties
 Name | Type | Description | Notes

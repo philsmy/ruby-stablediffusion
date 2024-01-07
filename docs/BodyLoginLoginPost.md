@@ -1,4 +1,4 @@
-# Rauto1111AI::BodyLoginLoginPost
+# RStableDiffusionAI::BodyLoginLoginPost
 
 ## Properties
 Name | Type | Description | Notes

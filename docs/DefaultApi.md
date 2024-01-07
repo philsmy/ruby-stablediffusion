@@ -1,4 +1,4 @@
-# Rauto1111AI::DefaultApi
+# RStableDiffusionAI::DefaultApi
 
 All URIs are relative to */*
 
@@ -92,9 +92,9 @@ Api Info
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 opts = { 
   serialize: true # BOOLEAN | 
 }
@@ -102,7 +102,7 @@ opts = {
 begin
   #Api Info
   api_instance.api_info_info_get(opts)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->api_info_info_get: #{e}"
 end
 ```
@@ -136,9 +136,9 @@ Api Info
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 opts = { 
   serialize: true # BOOLEAN | 
 }
@@ -146,7 +146,7 @@ opts = {
 begin
   #Api Info
   api_instance.api_info_info_get_0(opts)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->api_info_info_get_0: #{e}"
 end
 ```
@@ -180,15 +180,15 @@ App Id
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #App Id
   result = api_instance.app_id_app_id_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->app_id_app_id_get: #{e}"
 end
 ```
@@ -219,15 +219,15 @@ App Id
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #App Id
   result = api_instance.app_id_app_id_get_0
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->app_id_app_id_get_0: #{e}"
 end
 ```
@@ -258,16 +258,16 @@ Build Resource
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 path = 'path_example' # String | 
 
 
 begin
   #Build Resource
   api_instance.build_resource_assets_path_get(path)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->build_resource_assets_path_get: #{e}"
 end
 ```
@@ -301,9 +301,9 @@ Create Embedding
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 body = nil # Object | 
 
 
@@ -311,7 +311,7 @@ begin
   #Create Embedding
   result = api_instance.create_embedding_sdapi_v1_create_embedding_post(body)
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->create_embedding_sdapi_v1_create_embedding_post: #{e}"
 end
 ```
@@ -345,9 +345,9 @@ Create Hypernetwork
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 body = nil # Object | 
 
 
@@ -355,7 +355,7 @@ begin
   #Create Hypernetwork
   result = api_instance.create_hypernetwork_sdapi_v1_create_hypernetwork_post(body)
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->create_hypernetwork_sdapi_v1_create_hypernetwork_post: #{e}"
 end
 ```
@@ -389,17 +389,17 @@ Download Sysinfo
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 opts = { 
-  attachment: Rauto1111AI::null.new #  | 
+  attachment: RStableDiffusionAI::null.new #  | 
 }
 
 begin
   #Download Sysinfo
   api_instance.download_sysinfo_internal_sysinfo_get(opts)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->download_sysinfo_internal_sysinfo_get: #{e}"
 end
 ```
@@ -433,17 +433,17 @@ Extras Batch Images Api
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
-body = Rauto1111AI::ExtrasBatchImagesRequest.new # ExtrasBatchImagesRequest | 
+api_instance = RStableDiffusionAI::DefaultApi.new
+body = RStableDiffusionAI::ExtrasBatchImagesRequest.new # ExtrasBatchImagesRequest | 
 
 
 begin
   #Extras Batch Images Api
   result = api_instance.extras_batch_images_api_sdapi_v1_extra_batch_images_post(body)
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->extras_batch_images_api_sdapi_v1_extra_batch_images_post: #{e}"
 end
 ```
@@ -477,17 +477,17 @@ Extras Single Image Api
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
-body = Rauto1111AI::ExtrasSingleImageRequest.new # ExtrasSingleImageRequest | 
+api_instance = RStableDiffusionAI::DefaultApi.new
+body = RStableDiffusionAI::ExtrasSingleImageRequest.new # ExtrasSingleImageRequest | 
 
 
 begin
   #Extras Single Image Api
   result = api_instance.extras_single_image_api_sdapi_v1_extra_single_image_post(body)
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->extras_single_image_api_sdapi_v1_extra_single_image_post: #{e}"
 end
 ```
@@ -521,14 +521,14 @@ Favicon
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Favicon
   api_instance.favicon_favicon_ico_get
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->favicon_favicon_ico_get: #{e}"
 end
 ```
@@ -559,9 +559,9 @@ Fetch File
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 opts = { 
   filename: '' # String | 
 }
@@ -569,7 +569,7 @@ opts = {
 begin
   #Fetch File
   api_instance.fetch_file_sd_extra_networks_thumb_get(opts)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->fetch_file_sd_extra_networks_thumb_get: #{e}"
 end
 ```
@@ -603,16 +603,16 @@ File Deprecated
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 path = 'path_example' # String | 
 
 
 begin
   #File Deprecated
   api_instance.file_deprecated_file_path_get(path)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->file_deprecated_file_path_get: #{e}"
 end
 ```
@@ -646,16 +646,16 @@ File
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 path_or_url = 'path_or_url_example' # String | 
 
 
 begin
   #File
   api_instance.file_file_path_or_url_get(path_or_url)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->file_file_path_or_url_get: #{e}"
 end
 ```
@@ -689,16 +689,16 @@ File
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 path_or_url = 'path_or_url_example' # String | 
 
 
 begin
   #File
   api_instance.file_file_path_or_url_head(path_or_url)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->file_file_path_or_url_head: #{e}"
 end
 ```
@@ -732,15 +732,15 @@ Get Cmd Flags
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Cmd Flags
   result = api_instance.get_cmd_flags_sdapi_v1_cmd_flags_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_cmd_flags_sdapi_v1_cmd_flags_get: #{e}"
 end
 ```
@@ -771,14 +771,14 @@ Get Config
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Config
   api_instance.get_config_config_get
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_config_config_get: #{e}"
 end
 ```
@@ -809,14 +809,14 @@ Get Config
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Config
   api_instance.get_config_config_get_0
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_config_config_get_0: #{e}"
 end
 ```
@@ -847,15 +847,15 @@ Get Config
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Config
   result = api_instance.get_config_sdapi_v1_options_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_config_sdapi_v1_options_get: #{e}"
 end
 ```
@@ -886,15 +886,15 @@ Get Current User
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Current User
   result = api_instance.get_current_user_user_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_current_user_user_get: #{e}"
 end
 ```
@@ -925,15 +925,15 @@ Get Current User
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Current User
   result = api_instance.get_current_user_user_get_0
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_current_user_user_get_0: #{e}"
 end
 ```
@@ -964,15 +964,15 @@ Get Embeddings
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Embeddings
   result = api_instance.get_embeddings_sdapi_v1_embeddings_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_embeddings_sdapi_v1_embeddings_get: #{e}"
 end
 ```
@@ -1003,15 +1003,15 @@ Get Face Restorers
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Face Restorers
   result = api_instance.get_face_restorers_sdapi_v1_face_restorers_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_face_restorers_sdapi_v1_face_restorers_get: #{e}"
 end
 ```
@@ -1042,15 +1042,15 @@ Get Hypernetworks
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Hypernetworks
   result = api_instance.get_hypernetworks_sdapi_v1_hypernetworks_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_hypernetworks_sdapi_v1_hypernetworks_get: #{e}"
 end
 ```
@@ -1081,15 +1081,15 @@ Get Latent Upscale Modes
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Latent Upscale Modes
   result = api_instance.get_latent_upscale_modes_sdapi_v1_latent_upscale_modes_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_latent_upscale_modes_sdapi_v1_latent_upscale_modes_get: #{e}"
 end
 ```
@@ -1120,14 +1120,14 @@ Get Loras
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Loras
   api_instance.get_loras_sdapi_v1_loras_get
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_loras_sdapi_v1_loras_get: #{e}"
 end
 ```
@@ -1158,15 +1158,15 @@ Get Memory
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Memory
   result = api_instance.get_memory_sdapi_v1_memory_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_memory_sdapi_v1_memory_get: #{e}"
 end
 ```
@@ -1197,9 +1197,9 @@ Get Metadata
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 opts = { 
   page: '', # String | 
   item: '' # String | 
@@ -1208,7 +1208,7 @@ opts = {
 begin
   #Get Metadata
   api_instance.get_metadata_sd_extra_networks_metadata_get(opts)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_metadata_sd_extra_networks_metadata_get: #{e}"
 end
 ```
@@ -1243,15 +1243,15 @@ Get Prompt Styles
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Prompt Styles
   result = api_instance.get_prompt_styles_sdapi_v1_prompt_styles_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_prompt_styles_sdapi_v1_prompt_styles_get: #{e}"
 end
 ```
@@ -1282,15 +1282,15 @@ Get Queue Status
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Queue Status
   result = api_instance.get_queue_status_queue_status_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_queue_status_queue_status_get: #{e}"
 end
 ```
@@ -1321,15 +1321,15 @@ Get Realesrgan Models
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Realesrgan Models
   result = api_instance.get_realesrgan_models_sdapi_v1_realesrgan_models_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_realesrgan_models_sdapi_v1_realesrgan_models_get: #{e}"
 end
 ```
@@ -1360,15 +1360,15 @@ Get Samplers
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Samplers
   result = api_instance.get_samplers_sdapi_v1_samplers_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_samplers_sdapi_v1_samplers_get: #{e}"
 end
 ```
@@ -1399,15 +1399,15 @@ Get Script Info
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Script Info
   result = api_instance.get_script_info_sdapi_v1_script_info_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_script_info_sdapi_v1_script_info_get: #{e}"
 end
 ```
@@ -1438,15 +1438,15 @@ Get Scripts List
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Scripts List
   result = api_instance.get_scripts_list_sdapi_v1_scripts_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_scripts_list_sdapi_v1_scripts_get: #{e}"
 end
 ```
@@ -1477,15 +1477,15 @@ Get Sd Models
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Sd Models
   result = api_instance.get_sd_models_sdapi_v1_sd_models_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_sd_models_sdapi_v1_sd_models_get: #{e}"
 end
 ```
@@ -1516,15 +1516,15 @@ Get Sd Vaes
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Sd Vaes
   result = api_instance.get_sd_vaes_sdapi_v1_sd_vae_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_sd_vaes_sdapi_v1_sd_vae_get: #{e}"
 end
 ```
@@ -1555,9 +1555,9 @@ Get Single Card
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 opts = { 
   page: '', # String | 
   tabname: '', # String | 
@@ -1567,7 +1567,7 @@ opts = {
 begin
   #Get Single Card
   api_instance.get_single_card_sd_extra_networks_get_single_card_get(opts)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_single_card_sd_extra_networks_get_single_card_get: #{e}"
 end
 ```
@@ -1603,15 +1603,15 @@ Get Token
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Token
   result = api_instance.get_token_token_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_token_token_get: #{e}"
 end
 ```
@@ -1642,15 +1642,15 @@ Get Token
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Token
   result = api_instance.get_token_token_get_0
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_token_token_get_0: #{e}"
 end
 ```
@@ -1681,15 +1681,15 @@ Get Upscalers
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Get Upscalers
   result = api_instance.get_upscalers_sdapi_v1_upscalers_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->get_upscalers_sdapi_v1_upscalers_get: #{e}"
 end
 ```
@@ -1720,17 +1720,17 @@ Img2Imgapi
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
-body = Rauto1111AI::StableDiffusionProcessingImg2Img.new # StableDiffusionProcessingImg2Img | 
+api_instance = RStableDiffusionAI::DefaultApi.new
+body = RStableDiffusionAI::StableDiffusionProcessingImg2Img.new # StableDiffusionProcessingImg2Img | 
 
 
 begin
   #Img2Imgapi
   result = api_instance.img2imgapi_sdapi_v1_img2img_post(body)
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->img2imgapi_sdapi_v1_img2img_post: #{e}"
 end
 ```
@@ -1764,16 +1764,16 @@ Interrogateapi
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
-body = Rauto1111AI::InterrogateRequest.new # InterrogateRequest | 
+api_instance = RStableDiffusionAI::DefaultApi.new
+body = RStableDiffusionAI::InterrogateRequest.new # InterrogateRequest | 
 
 
 begin
   #Interrogateapi
   api_instance.interrogateapi_sdapi_v1_interrogate_post(body)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->interrogateapi_sdapi_v1_interrogate_post: #{e}"
 end
 ```
@@ -1807,14 +1807,14 @@ Interruptapi
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Interruptapi
   api_instance.interruptapi_sdapi_v1_interrupt_post
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->interruptapi_sdapi_v1_interrupt_post: #{e}"
 end
 ```
@@ -1845,14 +1845,14 @@ No authorization required
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #<Lambda>
   api_instance.lambda_internal_ping_get
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->lambda_internal_ping_get: #{e}"
 end
 ```
@@ -1883,14 +1883,14 @@ No authorization required
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #<Lambda>
   api_instance.lambda_internal_profile_startup_get
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->lambda_internal_profile_startup_get: #{e}"
 end
 ```
@@ -1921,14 +1921,14 @@ No authorization required
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #<Lambda>
   api_instance.lambda_internal_sysinfo_download_get
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->lambda_internal_sysinfo_download_get: #{e}"
 end
 ```
@@ -1959,14 +1959,14 @@ Login Check
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Login Check
   api_instance.login_check_login_check_get
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->login_check_login_check_get: #{e}"
 end
 ```
@@ -1997,14 +1997,14 @@ Login Check
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Login Check
   api_instance.login_check_login_check_get_0
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->login_check_login_check_get_0: #{e}"
 end
 ```
@@ -2035,9 +2035,9 @@ Login
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 grant_type = 'grant_type_example' # String | 
 username = 'username_example' # String | 
 password = 'password_example' # String | 
@@ -2049,7 +2049,7 @@ client_secret = 'client_secret_example' # String |
 begin
   #Login
   api_instance.login_login_post(grant_typeusernamepasswordscopeclient_idclient_secret)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->login_login_post: #{e}"
 end
 ```
@@ -2088,9 +2088,9 @@ Login
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 grant_type = 'grant_type_example' # String | 
 username = 'username_example' # String | 
 password = 'password_example' # String | 
@@ -2102,7 +2102,7 @@ client_secret = 'client_secret_example' # String |
 begin
   #Login
   api_instance.login_login_post_0(grant_typeusernamepasswordscopeclient_idclient_secret)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->login_login_post_0: #{e}"
 end
 ```
@@ -2141,15 +2141,15 @@ Main
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Main
   result = api_instance.main_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->main_get: #{e}"
 end
 ```
@@ -2180,15 +2180,15 @@ Main
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Main
   result = api_instance.main_head
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->main_head: #{e}"
 end
 ```
@@ -2219,17 +2219,17 @@ Pnginfoapi
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
-body = Rauto1111AI::PNGInfoRequest.new # PNGInfoRequest | 
+api_instance = RStableDiffusionAI::DefaultApi.new
+body = RStableDiffusionAI::PNGInfoRequest.new # PNGInfoRequest | 
 
 
 begin
   #Pnginfoapi
   result = api_instance.pnginfoapi_sdapi_v1_png_info_post(body)
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->pnginfoapi_sdapi_v1_png_info_post: #{e}"
 end
 ```
@@ -2263,17 +2263,17 @@ Predict
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
-body = Rauto1111AI::PredictBody.new # PredictBody | 
+api_instance = RStableDiffusionAI::DefaultApi.new
+body = RStableDiffusionAI::PredictBody.new # PredictBody | 
 api_name = 'api_name_example' # String | 
 
 
 begin
   #Predict
   api_instance.predict_api_api_name_post(bodyapi_name)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->predict_api_api_name_post: #{e}"
 end
 ```
@@ -2308,17 +2308,17 @@ Predict
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
-body = Rauto1111AI::PredictBody.new # PredictBody | 
+api_instance = RStableDiffusionAI::DefaultApi.new
+body = RStableDiffusionAI::PredictBody.new # PredictBody | 
 api_name = 'api_name_example' # String | 
 
 
 begin
   #Predict
   api_instance.predict_api_api_name_post_0(bodyapi_name)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->predict_api_api_name_post_0: #{e}"
 end
 ```
@@ -2353,17 +2353,17 @@ Predict
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
-body = Rauto1111AI::PredictBody.new # PredictBody | 
+api_instance = RStableDiffusionAI::DefaultApi.new
+body = RStableDiffusionAI::PredictBody.new # PredictBody | 
 api_name = 'api_name_example' # String | 
 
 
 begin
   #Predict
   api_instance.predict_run_api_name_post(bodyapi_name)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->predict_run_api_name_post: #{e}"
 end
 ```
@@ -2398,17 +2398,17 @@ Predict
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
-body = Rauto1111AI::PredictBody.new # PredictBody | 
+api_instance = RStableDiffusionAI::DefaultApi.new
+body = RStableDiffusionAI::PredictBody.new # PredictBody | 
 api_name = 'api_name_example' # String | 
 
 
 begin
   #Predict
   api_instance.predict_run_api_name_post_0(bodyapi_name)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->predict_run_api_name_post_0: #{e}"
 end
 ```
@@ -2443,9 +2443,9 @@ Preprocess
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 body = nil # Object | 
 
 
@@ -2453,7 +2453,7 @@ begin
   #Preprocess
   result = api_instance.preprocess_sdapi_v1_preprocess_post(body)
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->preprocess_sdapi_v1_preprocess_post: #{e}"
 end
 ```
@@ -2487,17 +2487,17 @@ Progressapi
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
-body = Rauto1111AI::ProgressRequest.new # ProgressRequest | 
+api_instance = RStableDiffusionAI::DefaultApi.new
+body = RStableDiffusionAI::ProgressRequest.new # ProgressRequest | 
 
 
 begin
   #Progressapi
   result = api_instance.progressapi_internal_progress_post(body)
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->progressapi_internal_progress_post: #{e}"
 end
 ```
@@ -2531,9 +2531,9 @@ Progressapi
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 opts = { 
   skip_current_image: false # BOOLEAN | 
 }
@@ -2542,7 +2542,7 @@ begin
   #Progressapi
   result = api_instance.progressapi_sdapi_v1_progress_get(opts)
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->progressapi_sdapi_v1_progress_get: #{e}"
 end
 ```
@@ -2576,15 +2576,15 @@ Quicksettings Hint
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Quicksettings Hint
   result = api_instance.quicksettings_hint_internal_quicksettings_hint_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->quicksettings_hint_internal_quicksettings_hint_get: #{e}"
 end
 ```
@@ -2615,14 +2615,14 @@ Refresh Checkpoints
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Refresh Checkpoints
   api_instance.refresh_checkpoints_sdapi_v1_refresh_checkpoints_post
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->refresh_checkpoints_sdapi_v1_refresh_checkpoints_post: #{e}"
 end
 ```
@@ -2653,14 +2653,14 @@ Refresh Loras
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Refresh Loras
   api_instance.refresh_loras_sdapi_v1_refresh_loras_post
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->refresh_loras_sdapi_v1_refresh_loras_post: #{e}"
 end
 ```
@@ -2691,14 +2691,14 @@ Reloadapi
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Reloadapi
   api_instance.reloadapi_sdapi_v1_reload_checkpoint_post
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->reloadapi_sdapi_v1_reload_checkpoint_post: #{e}"
 end
 ```
@@ -2729,16 +2729,16 @@ Reset Iterator
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
-body = Rauto1111AI::ResetBody.new # ResetBody | 
+api_instance = RStableDiffusionAI::DefaultApi.new
+body = RStableDiffusionAI::ResetBody.new # ResetBody | 
 
 
 begin
   #Reset Iterator
   api_instance.reset_iterator_reset_post(body)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->reset_iterator_reset_post: #{e}"
 end
 ```
@@ -2772,16 +2772,16 @@ Reset Iterator
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
-body = Rauto1111AI::ResetBody.new # ResetBody | 
+api_instance = RStableDiffusionAI::DefaultApi.new
+body = RStableDiffusionAI::ResetBody.new # ResetBody | 
 
 
 begin
   #Reset Iterator
   api_instance.reset_iterator_reset_post_0(body)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->reset_iterator_reset_post_0: #{e}"
 end
 ```
@@ -2815,16 +2815,16 @@ Reverse Proxy
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 url_path = 'url_path_example' # String | 
 
 
 begin
   #Reverse Proxy
   api_instance.reverse_proxy_proxy_url_path_get(url_path)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->reverse_proxy_proxy_url_path_get: #{e}"
 end
 ```
@@ -2858,16 +2858,16 @@ Reverse Proxy
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 url_path = 'url_path_example' # String | 
 
 
 begin
   #Reverse Proxy
   api_instance.reverse_proxy_proxy_url_path_head(url_path)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->reverse_proxy_proxy_url_path_head: #{e}"
 end
 ```
@@ -2901,15 +2901,15 @@ Robots Txt
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Robots Txt
   result = api_instance.robots_txt_robots_txt_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->robots_txt_robots_txt_get: #{e}"
 end
 ```
@@ -2940,16 +2940,16 @@ Set Config
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 body = nil # Object | 
 
 
 begin
   #Set Config
   api_instance.set_config_sdapi_v1_options_post(body)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->set_config_sdapi_v1_options_post: #{e}"
 end
 ```
@@ -2983,14 +2983,14 @@ Skip
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Skip
   api_instance.skip_sdapi_v1_skip_post
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->skip_sdapi_v1_skip_post: #{e}"
 end
 ```
@@ -3021,14 +3021,14 @@ Startup Events
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Startup Events
   api_instance.startup_events_startup_events_get
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->startup_events_startup_events_get: #{e}"
 end
 ```
@@ -3059,16 +3059,16 @@ Static Resource
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 path = 'path_example' # String | 
 
 
 begin
   #Static Resource
   api_instance.static_resource_static_path_get(path)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->static_resource_static_path_get: #{e}"
 end
 ```
@@ -3102,17 +3102,17 @@ Text2Imgapi
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
-body = Rauto1111AI::StableDiffusionProcessingTxt2Img.new # StableDiffusionProcessingTxt2Img | 
+api_instance = RStableDiffusionAI::DefaultApi.new
+body = RStableDiffusionAI::StableDiffusionProcessingTxt2Img.new # StableDiffusionProcessingTxt2Img | 
 
 
 begin
   #Text2Imgapi
   result = api_instance.text2imgapi_sdapi_v1_txt2img_post(body)
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->text2imgapi_sdapi_v1_txt2img_post: #{e}"
 end
 ```
@@ -3146,15 +3146,15 @@ Theme Css
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Theme Css
   result = api_instance.theme_css_theme_css_get
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->theme_css_theme_css_get: #{e}"
 end
 ```
@@ -3185,9 +3185,9 @@ Train Embedding
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 body = nil # Object | 
 
 
@@ -3195,7 +3195,7 @@ begin
   #Train Embedding
   result = api_instance.train_embedding_sdapi_v1_train_embedding_post(body)
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->train_embedding_sdapi_v1_train_embedding_post: #{e}"
 end
 ```
@@ -3229,9 +3229,9 @@ Train Hypernetwork
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 body = nil # Object | 
 
 
@@ -3239,7 +3239,7 @@ begin
   #Train Hypernetwork
   result = api_instance.train_hypernetwork_sdapi_v1_train_hypernetwork_post(body)
   p result
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->train_hypernetwork_sdapi_v1_train_hypernetwork_post: #{e}"
 end
 ```
@@ -3273,14 +3273,14 @@ Unloadapi
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 
 begin
   #Unloadapi
   api_instance.unloadapi_sdapi_v1_unload_checkpoint_post
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->unloadapi_sdapi_v1_unload_checkpoint_post: #{e}"
 end
 ```
@@ -3311,16 +3311,16 @@ Upload File
 ### Example
 ```ruby
 # load the gem
-require 'ruby-auto1111'
+require 'ruby-stablediffusion'
 
-api_instance = Rauto1111AI::DefaultApi.new
+api_instance = RStableDiffusionAI::DefaultApi.new
 files = ['files_example'] # Array<String> | 
 
 
 begin
   #Upload File
   api_instance.upload_file_upload_post(files)
-rescue Rauto1111AI::ApiError => e
+rescue RStableDiffusionAI::ApiError => e
   puts "Exception when calling DefaultApi->upload_file_upload_post: #{e}"
 end
 ```

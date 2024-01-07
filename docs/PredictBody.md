@@ -1,4 +1,4 @@
-# Rauto1111AI::PredictBody
+# RStableDiffusionAI::PredictBody
 
 ## Properties
 Name | Type | Description | Notes

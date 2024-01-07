@@ -1,4 +1,4 @@
-# Rauto1111AI::MemoryResponse
+# RStableDiffusionAI::MemoryResponse
 
 ## Properties
 Name | Type | Description | Notes

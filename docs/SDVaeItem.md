@@ -1,4 +1,4 @@
-# Rauto1111AI::SDVaeItem
+# RStableDiffusionAI::SDVaeItem
 
 ## Properties
 Name | Type | Description | Notes

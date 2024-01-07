@@ -1,4 +1,4 @@
-# Rauto1111AI::ExtrasBatchImagesRequest
+# RStableDiffusionAI::ExtrasBatchImagesRequest
 
 ## Properties
 Name | Type | Description | Notes

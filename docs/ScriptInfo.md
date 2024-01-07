@@ -1,4 +1,4 @@
-# Rauto1111AI::ScriptInfo
+# RStableDiffusionAI::ScriptInfo
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Rauto1111AI::HypernetworkItem
+# RStableDiffusionAI::HypernetworkItem
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Rauto1111AI::ValidationError
+# RStableDiffusionAI::ValidationError
 
 ## Properties
 Name | Type | Description | Notes

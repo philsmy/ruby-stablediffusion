@@ -1,4 +1,4 @@
-# Rauto1111AI::ExtrasSingleImageRequest
+# RStableDiffusionAI::ExtrasSingleImageRequest
 
 ## Properties
 Name | Type | Description | Notes

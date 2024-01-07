@@ -1,4 +1,4 @@
-# Rauto1111AI::AnyOfValidationErrorLocItems
+# RStableDiffusionAI::AnyOfValidationErrorLocItems
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Rauto1111AI::FaceRestorerItem
+# RStableDiffusionAI::FaceRestorerItem
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Rauto1111AI::HTTPValidationError
+# RStableDiffusionAI::HTTPValidationError
 
 ## Properties
 Name | Type | Description | Notes

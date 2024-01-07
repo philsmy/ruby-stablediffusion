@@ -1,4 +1,4 @@
-# Rauto1111AI::AnyOfPredictBodyRequest
+# RStableDiffusionAI::AnyOfPredictBodyRequest
 
 ## Properties
 Name | Type | Description | Notes

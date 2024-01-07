@@ -1,4 +1,4 @@
-# Rauto1111AI::Options
+# RStableDiffusionAI::Options
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Rauto1111AI::InterrogateRequest
+# RStableDiffusionAI::InterrogateRequest
 
 ## Properties
 Name | Type | Description | Notes

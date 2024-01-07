@@ -1,4 +1,4 @@
-# Rauto1111AI::Estimation
+# RStableDiffusionAI::Estimation
 
 ## Properties
 Name | Type | Description | Notes

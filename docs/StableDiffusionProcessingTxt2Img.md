@@ -1,4 +1,4 @@
-# Rauto1111AI::StableDiffusionProcessingTxt2Img
+# RStableDiffusionAI::StableDiffusionProcessingTxt2Img
 
 ## Properties
 Name | Type | Description | Notes
